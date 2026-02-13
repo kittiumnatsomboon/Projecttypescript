@@ -6,6 +6,8 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { PopupWidget } from "./components/PopupWidget";
 import Home from './pages/Home';
+
+// layout
 function Layout() {
   return (
     <ThemeProvider attribute="class">
