@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import './App.css'
 import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import { ThemeProvider } from "next-themes";
@@ -20,11 +19,7 @@ function Layout() {
   );
 }
 
-function App({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+function App() {
 
   return (
     <BrowserRouter>
