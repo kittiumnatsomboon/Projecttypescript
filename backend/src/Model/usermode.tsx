@@ -13,10 +13,22 @@ const userschema = new Schema({
         type:String,
         required:true
     },
+    // usertype : 0 user , 1 admin
     usertype:{
         type:String,
         required:true,
         default:0
+    },
+    // status user default : active
+    isActive:{
+        type:Boolean,
+        required:true,
+        default:true
+    },
+    nameimage:{
+        type:String,
+        required:true,
+        default:"s3://storageofworkout/Defaultimage/"
     },
     email:{
         type:String,
