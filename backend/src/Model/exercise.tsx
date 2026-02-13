@@ -1,11 +1,13 @@
 import { Schema, model, connect } from 'mongoose';
 export type ExerciseStatus = "active" | "close" | "pending" | "cancel"|"resolved";
+export type ExerciseCatagory = "ประเภทแขน" | "ประเภทขา" | "ประเภทออก" | "ประเภทหลัง"|"ประเภทหน้าท้อง";
 
 export interface IExercise {
     exercisename: string;
     exercisedescription: string;
     exerciseimage: string;
     exercisestatus: ExerciseStatus;
+    exercisecatagory:ExerciseCatagory;
     created_at:Date;
     updated_at:Date;
     deleted_at:Date;
@@ -33,7 +35,11 @@ export const exercise = new Schema<IExercise>({
         type: String,
         enum: ["active", "close", "pending", "cancel","resolved"], // จำกัดค่าที่รับได้
         default: "pending",
-        required: true
+        required: [true, 'กรุณาสถานะ']
+    },
+    exercisecatagory:{
+        type:String,
+        required: [true, 'กรุณาระบุประเภท']
     },
     created_at:{
         type:Date,
