@@ -4,3 +4,19 @@
 วิธีการใช้งาน : -
 ผู้จัดทำ : Username : Champ
 ข้อมูลติดต่อ : -
+
+**พัฒนาด้วย React vite Fronend
+[https://vite.dev/guide/]
+`npm create vite@latest` `
+
+**พัฒนาด้วย Express backend
+[https://expressjs.com/]
+`npm i express` `
+`npm init -y` ` สร้าง Package Json
+**ติดตั่ง typescript
+`npm install -g typescript` `
+หรือ
+`npm install --save-dev typescript` `
+และ
+`npx tsc --init` `
+และทำการตั่งค่าโปรเจ็ก typescript ใน folder backend ต่อ
