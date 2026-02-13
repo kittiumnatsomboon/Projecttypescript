@@ -12,6 +12,7 @@ function Layout() {
   return (
     <ThemeProvider attribute="class">
       <Navbar />
+      <Outlet/>
       <Footer />
       <PopupWidget />
     </ThemeProvider>

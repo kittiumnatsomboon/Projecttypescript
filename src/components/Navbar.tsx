@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ThemeChanger from "./DarkSwitch";
 import { Disclosure } from "@headlessui/react";
 
@@ -96,9 +96,7 @@ export const Navbar = () => {
         </div>
 
       </nav>
-      <main>
-        <Outlet/>
-      </main>
+      
     </div>
   );
 }
