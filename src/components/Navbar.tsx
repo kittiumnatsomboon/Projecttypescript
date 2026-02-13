@@ -1,6 +1,5 @@
 import {Link} from "react-router-dom";
 import ThemeChanger from "./DarkSwitch";
-import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
 
 export const Navbar = () => {
@@ -19,7 +18,7 @@ export const Navbar = () => {
         <Link to="/">
           <span className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
               <span>
-                <Image
+                <img
                   src="/img/logo.svg"
                   width="32"
                   alt="N"

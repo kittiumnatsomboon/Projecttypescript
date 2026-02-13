@@ -1,5 +1,4 @@
-import Link from "next/link";
-import Image from "next/image";
+import {Link} from "react-router-dom";
 import { Container } from "../components/Container";
 
 export function Footer() {
@@ -13,10 +12,10 @@ export function Footer() {
             <div>
               {" "}
               <Link
-                href="/"
+                to="/"
                 className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100"
               >
-                <Image
+                <img
                   src="/img/logo.svg"
                   alt="N"
                   width="32"
@@ -40,7 +39,7 @@ export function Footer() {
                 rel="noopener"
                 className="relative block w-44"
               >
-                <Image
+                <img
                   src="/img/vercel.svg"
                   alt="Powered by Vercel"
                   width="212"
@@ -55,7 +54,7 @@ export function Footer() {
               {navigation.map((item, index) => (
                 <Link
                   key={index}
-                  href="/"
+                  to="/"
                   className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
                 >
                   {item}
@@ -68,7 +67,7 @@ export function Footer() {
               {legal.map((item, index) => (
                 <Link
                   key={index}
-                  href="/"
+                  to="/"
                   className="w-full px-4 py-2 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-trueGray-700"
                 >
                   {item}
