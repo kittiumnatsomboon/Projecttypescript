@@ -1,10 +1,15 @@
 import { Schema, model, connect } from 'mongoose';
-
+export interface Setcolump{
+    fisrtname:String;
+    latname:String;
+    usertype:String;
+    isActive:Boolean;
+    nameimage:String;
+    email:String;
+    password:String;
+    Created_at:Date;
+}
 const userschema = new Schema({
-    userid:{
-        type:String,
-        required:true
-    },
     fisrtname:{
         type:String,
         required:true
