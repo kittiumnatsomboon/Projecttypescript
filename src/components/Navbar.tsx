@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import ThemeChanger from "./DarkSwitch";
 import { Disclosure } from "@headlessui/react";
 import { Navbarmenu } from "../Data/Navbarmenu";
 export const Navbar = () => {
@@ -20,13 +19,12 @@ export const Navbar = () => {
                 className="w-8"
               />
             </span>
-            <span>Nextly</span>
+            <span>Exercise-Project</span>
           </span>
         </Link>
 
         {/* get started  */}
         <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
-          <ThemeChanger />
           <div className="hidden mr-3 lg:flex nav__item">
             <Link to="/" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
               Get Started
