@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { Field, Form, Formik, ErrorMessage } from "formik"
 import Modal from "react-modal";
 import Modalterm, { CustomStyles } from "../components/Modal";
+import Register from "../Auth/registerapi";
 
 // formik yup validate
 const SignupSchema = Yup.object().shape({
@@ -40,6 +41,7 @@ const SignupSchema = Yup.object().shape({
 
 const AuthRegister = () => {
   const [openmodalterm, setopenmodal] = useState(false);
+  const [message , setmessage] = useState();
   function openModal() {
     setopenmodal(true);
   }
@@ -59,8 +61,8 @@ const AuthRegister = () => {
         }}
         validationSchema={SignupSchema}
         onSubmit={(values, { setSubmitting }) => {
-          console.log('Submitting', values);
-          setSubmitting(false);
+          Register(values)
+          
         }}
       >
         {({  }) => (
