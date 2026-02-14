@@ -1,7 +1,6 @@
 import { Schema, model, connect } from 'mongoose';
 export interface Setcolump{
-    fisrtname:String;
-    latname:String;
+    fullname:String;
     usertype:String;
     isActive:Boolean;
     nameimage:String;
@@ -10,11 +9,7 @@ export interface Setcolump{
     Created_at:Date;
 }
 const userschema = new Schema({
-    fisrtname:{
-        type:String,
-        required:true
-    },
-    latname:{
+    fullname:{
         type:String,
         required:true
     },
