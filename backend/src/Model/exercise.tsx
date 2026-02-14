@@ -13,8 +13,6 @@ export interface IExercise {
     deleted_at:Date;
 }
 
-
-
 export const exercise = new Schema<IExercise>({
     exercisename:{
         type:String,
