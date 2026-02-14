@@ -16,12 +16,14 @@
     "@tailwindcss/postcss": "^4.1.18",
     "@tailwindcss/vite": "^4.1.18",
     "flowbite-react": "^0.12.17",
+    "formik": "^2.4.9",
     "next": "^16.1.6",
     "next-themes": "^0.4.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-hook-form": "^7.71.1",
-    "react-router-dom": "^7.13.0"
+    "react-router-dom": "^7.13.0",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
