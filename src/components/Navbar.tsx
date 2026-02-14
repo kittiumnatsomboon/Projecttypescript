@@ -20,7 +20,7 @@ export const Navbar = () => {
                 className="w-8"
               />
             </span>
-            <span>Nextly</span>
+            <span>Exercise-Project</span>
           </span>
         </Link>
 
