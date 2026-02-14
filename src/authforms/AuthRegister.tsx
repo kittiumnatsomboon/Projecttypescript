@@ -64,7 +64,7 @@ const AuthRegister = () => {
           setSubmitting(false);
         }}
       >
-        {({ errors, touched }) => (
+        {({  }) => (
           <Form >
             <div className="mb-4">
               <div className="mb-2 block text-black">
