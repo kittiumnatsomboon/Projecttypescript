@@ -15,7 +15,7 @@ const AuthLogin = () => {
       <form onSubmit={handleSubmit} >
         <div className="mb-4">
           <div className="mb-2 block">
-            <Label htmlFor="Username" value="Username" />
+            <Label htmlFor="Username" />
           </div>
           <TextInput
             id="Username"
@@ -27,7 +27,7 @@ const AuthLogin = () => {
         </div>
         <div className="mb-4">
           <div className="mb-2 block">
-            <Label htmlFor="userpwd" value="Password" />
+            <Label htmlFor="userpwd" />
           </div>
           <TextInput
             id="userpwd"
