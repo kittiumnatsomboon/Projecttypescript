@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link } from "react-router";
 import * as Yup from 'yup';
 import { Field, Form, Formik, ErrorMessage } from "formik"
 import Modal from "react-modal";
 import Modalterm, { CustomStyles } from "../components/Modal";
-// ยังไม่ได้แก้
+
+// formik yup validate
 const SignupSchema = Yup.object().shape({
   fullname: Yup.string()
     .min(2, 'อักษรขั้นต่ำ 2 ตัวอักษร')
@@ -45,8 +46,6 @@ const AuthRegister = () => {
   function closeModal() {
     setopenmodal(false);
   }
-
-
 
   return (
     <>
