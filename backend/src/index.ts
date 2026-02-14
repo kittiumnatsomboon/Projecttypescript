@@ -1,8 +1,15 @@
 import express from 'express';
 import type { Request, Response, Application } from 'express';
 import user from "./api/user.js"
+import cors from 'cors';
+import options from './config/allowaccess.js';
 const app: Application = express();
 const PORT = process.env.PORT || 3000;
+
+
+
+app.use(cors(options));
+
 
 app.use('/query',user)
 app.get('/', (req: Request, res: Response) => {
