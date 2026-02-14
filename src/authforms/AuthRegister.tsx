@@ -1,5 +1,16 @@
 import { Link, useNavigate } from "react-router";
+import * as Yup from 'yup';
 
+// ยังไม่ได้แก้
+const SignupSchema = Yup.object().shape({
+  firstName: Yup.string()
+    .min(2, 'Too Short!')
+    .max(50, 'Too Long!')
+    .required('Required'),
+  email: Yup.string()
+    .email('Invalid email')
+    .required('Required'),
+});
 
 const AuthRegister = () => {
   const navigate = useNavigate();
