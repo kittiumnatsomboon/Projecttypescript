@@ -27,4 +27,4 @@ app.get('/', (req: Request, res: Response) => {
 //   console.log(`Server is running on http://localhost:${PORT}`);
 // });
 
-export const handle = serverless(app);
+export const handler = serverless(app);
