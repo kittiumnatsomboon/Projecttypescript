@@ -26,7 +26,7 @@ router.post('/', async (req: Request<{}, {}, Createuserbody>, res: Response) => 
         // เช็กอีเมลล์และชื่อซ้ำ
         const hashedPassword= await bcrypt.hash(password, saltRounds);
         await User.insertOne({fullname,email,password:hashedPassword});
-        res.status(201).json({message:"success"});
+        res.status(201).json({message:"สมัครสมาชิกสำเร็จ"});
     } catch (error) {
         res.json({ message: `Database connection error ${error}` })
     }
