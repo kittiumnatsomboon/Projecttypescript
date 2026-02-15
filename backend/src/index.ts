@@ -1,17 +1,21 @@
 import express from 'express';
 import type { Request, Response, Application } from 'express';
-import user from "./api/user.js"
 import cors from 'cors';
 import options from './config/allowaccess.js';
+import registerapi from "./api/register.js";
+import mongoose from './config/database.config.js';
+mongoose;
 const app: Application = express();
 const PORT = process.env.PORT || 3000;
 
 
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors(options));
 
+app.use('/api/register',registerapi)
 
-app.use('/query',user)
 app.get('/', (req: Request, res: Response) => {
   res.json('Hello World with TypeScript and Express!');
 });

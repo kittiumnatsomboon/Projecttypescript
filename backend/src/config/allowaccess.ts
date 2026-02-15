@@ -1,5 +1,5 @@
 
-const allowedOrigins = ['http://localhost:5173', 'https://www.your-frontend-domain.com'];
+const allowedOrigins = ['http://localhost:5173'];
 
 // Define the CORS options
 const options = {

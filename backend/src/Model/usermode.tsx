@@ -21,13 +21,11 @@ const userschema = new Schema({
     },
     // status user default : active
     isActive:{
-        type:Boolean,
-        required:true,
-        default:true
+        type:String,
+        default:"active"
     },
     nameimage:{
         type:String,
-        required:true,
         default:"s3://storageofworkout/Defaultimage/"
     },
     email:{
@@ -40,7 +38,6 @@ const userschema = new Schema({
     },
     Created_at:{
         type:Date,
-        required:true
     }
 })
 const User = model('user', userschema);

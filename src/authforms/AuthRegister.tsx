@@ -4,8 +4,7 @@ import * as Yup from 'yup';
 import { Field, Form, Formik, ErrorMessage } from "formik"
 import Modal from "react-modal";
 import Modalterm, { CustomStyles } from "../components/Modal";
-import Register from "../Auth/registerapi";
-
+import axios from 'axios';
 // formik yup validate
 const SignupSchema = Yup.object().shape({
   fullname: Yup.string()
@@ -41,7 +40,7 @@ const SignupSchema = Yup.object().shape({
 
 const AuthRegister = () => {
   const [openmodalterm, setopenmodal] = useState(false);
-  const [message , setmessage] = useState();
+  const [message, setmessage] = useState();
   function openModal() {
     setopenmodal(true);
   }
@@ -57,15 +56,20 @@ const AuthRegister = () => {
           email: "",
           password: "",
           confirmpassword: "",
-          agree:"",
+          agree: "",
         }}
         validationSchema={SignupSchema}
-        onSubmit={(values) => {
-          Register(values)
-          
+        onSubmit={async (values) => {
+          await axios.post("http://localhost:3000/api/register", values)
+            .then((res) => {
+                setmessage(res.data.message);
+            })
+            .catch((error) => {
+              console.error(error);
+            });
         }}
       >
-        {({  }) => (
+        {({ }) => (
           <Form >
             <div className="mb-4">
               <div className="mb-2 block text-black">
@@ -132,7 +136,7 @@ const AuthRegister = () => {
                 </span>
               </label>
               <ErrorMessage name="agree" component="div" className="text-red-500" />
-              
+
 
               {openmodalterm &&
                 <div>
@@ -146,6 +150,7 @@ const AuthRegister = () => {
                 </div>
               }
             </div>
+            <div className="text-green-500 text-center">{message}</div>
             <button type="submit" className="w-full bg-sky-500 rounded-sm pt-2 pb-2 hover:bg-sky-700">สมัครสมาชิก</button>
           </Form>
         )}
