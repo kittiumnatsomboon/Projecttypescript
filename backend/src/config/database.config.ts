@@ -6,8 +6,9 @@ dotenv.config();
 const mongoDBURL = process.env.MONGODB_URI; 
 
 // Connect to MongoDB
-mongoose.connect(mongoDBURL as string)
+mongoose.connect(mongoDBURL as string , {maxPoolSize:10})
   .then(() => {
+
     console.log("Connected to MongoDB successfully");
     // Start the Express server AFTER a successful database connection
   })

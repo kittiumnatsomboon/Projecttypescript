@@ -61,8 +61,7 @@ const AuthRegister = () => {
         }}
         validationSchema={SignupSchema}
         onSubmit={(values) => {
-          Register(values)
-          
+         Register(values)
         }}
       >
         {({  }) => (
